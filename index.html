@@ -638,7 +638,6 @@
                         <option value="" disabled selected>পেমেন্ট মাধ্যম নির্বাচন করুন</option>
                         <option value="bkash">bKash</option>
                         <option value="nagad">Nagad</option>
-                        <option value="rocket">Rocket</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -814,10 +813,9 @@
         // Generate referral link
         function generateReferralLink() {
             const currentUrl = window.location.href.split('?')
-            const referralLink = 'https://t.me/@PlaytoEarn122_bot?start='+userId;
+            const referralLink = 'https://t.me/@PlaytoEarn122_bot?start='ref+userId;
             document.getElementById('referral-link').value = referralLink;
         }
-    
         // Copy referral link to clipboard
         function copyReferralLink() {
             const referralLink = document.getElementById('referral-link');
@@ -840,7 +838,7 @@
 
         // Check if Monetag ad is ready
         function checkAdReady() {
-            if (typeof window.show_9472189 !== 'function') {
+            if (typeof window.show_11009960 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
                 setTimeout(checkAdReady, 1000);
             } else {
